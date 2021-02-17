@@ -1,0 +1,55 @@
+Name: Rina Karnauch
+ID: 319132353
+CS-USER: rina.karnauch
+
+SpreaderDetectorBackend
+-----------------------------
+Please explain how you dealt with the following parts of the exam.
+
+Input processing
+----------------
+Upon getting two files, i decided to proccess first the people file, because first of all we have
+the existence of the people before the meetings- their might be people information without meetings.
+While proccessing the people i have decided to go line by line and handle the data which will be
+explained why and how in the DATA STORING section.
+Afterwards i process the meetings file- line by line aswell. First line will define our big corona
+infector and afterwards each line will define a meeting. The data storing of meetings will be
+explained why and how in the DATA STORING section.
+
+Data storing
+------------
+The program shell receive two files- therefore we shall have two main data structures.
+Each data structure is an array of a different struct we create.
+1. storing Person - struct which defines a person, by name, ID, age, crnaRate which will be later on
+calculated, and order- the order of inserting each person.
+The person array is sorted after storing itself, so while searching for an ID from the meetings'
+data i will receive, we will be able to search is in BINARY SEARCH- to minimize runtime- this sort
+is not connected to the probability sort we shall have afterwards, and is done by a comperator i
+design to compare by ID values- which is known to be different for each person info. The sorting is
+bounded with O(mlog(n)) when m is the meetings amount and n is the people amount- due to search time
+ which is log(n) and we search is up m time.
+2. storing Meeting(meetLine)- struct which defines a meeting by the infector(ID of person), infected
+(ID of  person) and time and dist, a line in the Meeting file.
+Meetings are stored chronologically due to the statement that the probabilities are affected by the
+degree of each meeting- weather it was with the first infected person, which makes it more likely
+to be ill.
+The array sorting of a meeting struct was chosen because we shall pass each meeting, find the
+infected person in the PEOPLE array with BINARY SEARCH, and calculte its probability with our
+crna function and previous information about the infector of the meeting.
+
+Results sorting
+---------------
+After calculating the probabilities degree by degree(just like I.H and then I.S), i shall have a
+Person array of all people, in the meetings or not in the meetings(lucky them), with crnaRates.
+Then i shall sort it out with qsort- qsort is sorting the array with a comparator i designed, so it
+will be stable(handling same crnaRate-s by choosing smaller order person value), and so it will sort
+ it out by the crnaRate feature of the Person struct, and not by ID's as before.
+ Because qsort is usually sorting from smaller to bigger- the comparator shall return negative
+ values upon higher rates. The sort is done with run time of O(nlog(n)), due to the qort type which
+ we discussed in DAST course.
+ After sorting it out- i shall just print it out as needed- by chekcing the crnaRate bounds and
+ printing the message for each case and person individually.
+
+
+
+

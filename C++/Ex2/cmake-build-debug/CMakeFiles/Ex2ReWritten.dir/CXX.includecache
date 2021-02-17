@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rina.karnauch/C++/Ex2/RecommenderSystem.h
+iostream
+-
+utility
+-
+iterator
+-
+map
+-
+vector
+-
+
+/Users/rina.karnauch/C++/Ex2/main.cpp
+iostream
+-
+fstream
+-
+iterator
+-
+RecommenderSystem.h
+/Users/rina.karnauch/C++/Ex2/RecommenderSystem.h
+

@@ -1,0 +1,3 @@
+/Users/rina.karnauch/CProjects/Ex3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/rina.karnauch/CProjects/Ex3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/rina.karnauch/CProjects/Ex3/cmake-build-debug/CMakeFiles/Ex3.dir

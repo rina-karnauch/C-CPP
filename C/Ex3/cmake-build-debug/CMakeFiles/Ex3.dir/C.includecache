@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/rina.karnauch/CProjects/Ex3/RBTree.h
+
+/Users/rina.karnauch/CProjects/Ex3/Structs.c
+string.h
+-
+stdlib.h
+-
+Structs.h
+/Users/rina.karnauch/CProjects/Ex3/Structs.h
+
+/Users/rina.karnauch/CProjects/Ex3/Structs.h
+RBTree.h
+/Users/rina.karnauch/CProjects/Ex3/RBTree.h
+
